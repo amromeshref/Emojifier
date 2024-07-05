@@ -1,0 +1,6 @@
+data/glove.6B.50d.txt
+logs/
+notebooks/.ipynb_checkpoints/
+notebooks/logs/
+src/__pycache__/
+src/logs/
