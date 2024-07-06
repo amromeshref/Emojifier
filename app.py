@@ -23,7 +23,7 @@ Window.clearcolor = (1, 1, 1, 1)
 # Initialize the predictor
 predictor = ModelPredictor()
 
-class SentenceProcessorApp(App):
+class EmojifierApp(App):
     def build(self):
         # Define the main layout
         anchor_layout = AnchorLayout()
@@ -69,5 +69,5 @@ class SentenceProcessorApp(App):
             self.output_image.source = "images/question.jpg"  # Default image for unknown output
 
 if __name__ == '__main__':
-    SentenceProcessorApp().run()
+    EmojifierApp().run()
 
