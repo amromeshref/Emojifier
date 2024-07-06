@@ -21,7 +21,21 @@ This project uses GloVe (Global Vectors for Word Representation) for word embedd
 The pre-trained word embeddings used in this project are obtained from the lab files inside the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera. You can find the `glove.6B.50d.txt` file used in this project at [this link](link_to_the_file_if_available).
 
 ## Dataset
-The dataset used in this project is sourced from `data/emojify_data.csv`, which contains pairs of sentences and corresponding emoji labels. Each sentence is associated with an emoji label representing the emotion or meaning conveyed by the sentence. The dataset is preprocessed and transformed into GloVe vectors for training the emoji prediction model. The dataset is obtained from the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera. </br>
+The dataset used in this project is sourced from `data/emojify_data.csv`, which contains pairs of sentences and corresponding emoji labels. Each sentence is associated with an emoji label representing the emotion or meaning conveyed by the sentence. The dataset is preprocessed and transformed into GloVe vectors for training the emoji prediction model.
+
+</br>
+
+There are five classes of emojis in the dataset:
+
+- :heart: (Class 0)
+- :baseball: (Class 1)
+- :smile: (Class 2)
+- :disappointed: (Class 3)
+- :fork_and_knife: (Class 4)
+
+</br>
+
+The dataset is obtained from the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera. </br>
 
 This is a sample from the dataset:
 <div align="center">
