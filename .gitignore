@@ -4,3 +4,4 @@ notebooks/.ipynb_checkpoints/
 notebooks/logs/
 src/__pycache__/
 src/logs/
+test.py
