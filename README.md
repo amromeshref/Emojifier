@@ -19,7 +19,7 @@ This project aims to create an AI model that predicts emojis based on input sent
 
 ## Word Embedding
 This project uses GloVe (Global Vectors for Word Representation) for word embedding. GloVe is an unsupervised learning algorithm for obtaining vector representations for words. The model reads GloVe vectors from the file `glove.6B.50d.txt`, which contains pre-trained word embeddings. These vectors are used to convert words in sentences to their corresponding embeddings, which are then fed into the model.</br>
-The pre-trained word embeddings used in this project are obtained from the lab files inside the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera. You can find the `glove.6B.50d.txt` file used in this project at [this link](link_to_the_file_if_available).
+The pre-trained word embeddings used in this project are obtained from the lab files inside the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera. You can find the `glove.6B.50d.txt` file used in this project at [this link](https://drive.google.com/file/d/11UPs7aFhyxkGfVGrMTqa2wdnFBFC-q4b/view?usp=sharing).
 
 ## Dataset
 The dataset used in this project is sourced from `data/emojify_data.csv`, which contains pairs of sentences and corresponding emoji labels. Each sentence is associated with an emoji label representing the emotion or meaning conveyed by the sentence. The dataset is preprocessed and transformed into GloVe vectors for training the emoji prediction model. The dataset is obtained from the week 2 of the "Sequence Models" course in the "Deep Learning Specialization" on Coursera.
@@ -53,6 +53,7 @@ This is a sample from the dataset:
    ```
    cd Emojifier
    ```
+1. Download this [file](https://drive.google.com/file/d/11UPs7aFhyxkGfVGrMTqa2wdnFBFC-q4b/view?usp=sharing) and put it in the `data/` directory.
 1. Type the following command to install the requirements file using pip:
     ```
     pip install -r requirements.txt
