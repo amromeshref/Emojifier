@@ -66,13 +66,13 @@ class DataTransformer:
             logging.error("Error: "+str(e))
             raise CustomException(e, sys)
 
-    def transform_data(self) -> list[tuple[np.ndarray, str]]:
+    def transform_data(self) -> list[tuple[np.ndarray, int]]:
         """
         This function will transform the input data to GloVe vectors.
         input: 
             data: input data(list of strings)
         output:
-            transformed_data: GloVe vectors of the data(3D numpy array of shape (number_of_samples, max_words_in_sentence, glove_vector_dim))
+            transformed_data: GloVe vectors of the input data(list of tuples of GloVe vectors and labels) 
         """
         try:
             # Initialize the transformed data
@@ -112,10 +112,13 @@ class DataTransformer:
         try:
             # Get the transformed data
             transformed_data = self.transform_data()
+
             # Convert the transformed data to a numpy array
             transformed_data = np.array(transformed_data, dtype=object)
+
             # Initialize the transformed data
             transformed_data_path = os.path.join(REPO_DIR_PATH, "data/transformed_data.npy")
+            
             # Save the transformed data to a file
             np.save(transformed_data_path, transformed_data)
         except Exception as e:
