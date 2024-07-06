@@ -24,11 +24,18 @@ This project aims to create an AI model that predicts emojis based on input sent
 - **app.py**: Creates a GUI using Kivy for users to input sentences and get emoji predictions.
 
 ## Installation
-1. Create a new environment.
+1. Create a new environment with a 3.9 Python version.
 1. Create a directory on your device and navigate to it.
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/emoji-predictor.git
-   cd emoji-predictor
    ```
+   git clone https://github.com/amromeshref/Emojifier.git
+   ```
+1. Navigate to the Emojifier directory.
+   ```
+   cd Emojifier
+   ```
+1. Type the following command to install the requirements file using pip:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
