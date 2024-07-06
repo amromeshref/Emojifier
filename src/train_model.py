@@ -25,7 +25,7 @@ class ModelTrainer:
 
     def load_data(self) -> np.ndarray:
         """
-        This function will load the transformed data.
+        This function will load the transformed data that will be used for training the model.
         input: 
             None
         output:
@@ -120,15 +120,25 @@ class ModelTrainer:
         output:
             None
         """
+        # Split the data into training and testing sets
         X_train, y_train, X_test, y_test = self.split_data()
+
+        # Create the model
         model = self.create_model()
+
+        # Compile the model with the optimizer, loss function and metrics
         model.compile(metrics = ['accuracy'], 
                optimizer = Adam(learning_rate = 0.01),
               loss = SparseCategoricalCrossentropy(from_logits = True))
+        
+        # Train the model
         model.fit(X_train, y_train, epochs = epochs, batch_size = batch_size)
+
+        # Save the model 
         date_time = datetime.now().strftime("%Y-%m-%d-%I-%M-%S")
         model.save(os.path.join(REPO_DIR_PATH, "models/other/emojifier_model_"+date_time+".h5"))
 
+        # Evaluate the model on the training and testing data
         train_data_accuracy = self.evaluate(model.predict(X_train), y_train)
         test_data_accuracy = self.evaluate(model.predict(X_test), y_test)
 
