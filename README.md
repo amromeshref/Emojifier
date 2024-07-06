@@ -7,8 +7,8 @@ This project aims to create an AI model that predicts emojis based on input sent
 1. [Word Embedding](#word-embedding)
 1. [Dataset](#dataset)
 1. [Project Structure](#project-structure)
+1. [Installation](#installation)
 1. [Model Prediction](#model-prediction)
-3. [Installation](#installation)
 
 ## Word Embedding
 This project uses GloVe (Global Vectors for Word Representation) for word embedding. GloVe is an unsupervised learning algorithm for obtaining vector representations for words. The model reads GloVe vectors from the file `glove.6B.50d.txt`, which contains pre-trained word embeddings. These vectors are used to convert words in sentences to their corresponding embeddings, which are then fed into the model.</br>
@@ -42,24 +42,6 @@ This is a sample from the dataset:
 - **src/utils.py**: Contains utility functions for reading GloVe vectors and loading configuration settings.
 - **app.py**: Creates a GUI using Kivy for users to input sentences and get emoji predictions.
 
-## Model Prediction
-To predict an emoji for a given sentence:
-
-```python
-from src.predict_model import ModelPredictor
-
-# Initialize the predictor
-predictor = ModelPredictor()
-
-# Example sentence
-sentence = "I am happy"
-
-# Predict emoji index
-prediction = predictor.predict(sentence)
-
-# Output the predicted emoji index
-print(f"Predicted emoji index: {prediction}")
-```
 
 ## Installation
 1. Create a new environment with a 3.9 Python version.
@@ -82,4 +64,22 @@ print(f"Predicted emoji index: {prediction}")
    python3 app.py
    ```
 
+## Model Prediction
+To predict an emoji for a given sentence:
+
+```python
+from src.predict_model import ModelPredictor
+
+# Initialize the predictor
+predictor = ModelPredictor()
+
+# Example sentence
+sentence = "I am happy"
+
+# Predict emoji index
+prediction = predictor.predict(sentence)
+
+# Output the predicted emoji index
+print(f"Predicted emoji index: {prediction}")
+```
 
