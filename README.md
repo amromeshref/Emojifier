@@ -3,6 +3,12 @@
 ## Overview
 This project aims to create an AI model that predicts emojis based on input sentences. It utilizes GloVe vectors for word embeddings and an LSTM network model built with TensorFlow/Keras. The project includes a Kivy-based GUI for user interaction.
 
+
+<div align="center">
+<img src= "images/app.png" style="width:700px;height:700;">
+</div> 
+
+
 ## Table of Contents
 1. [Word Embedding](#word-embedding)
 1. [Dataset](#dataset)
