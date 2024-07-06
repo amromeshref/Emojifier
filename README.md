@@ -76,10 +76,10 @@ predictor = ModelPredictor()
 # Example sentence
 sentence = "I am happy"
 
-# Predict emoji index
-prediction = predictor.predict(sentence)
+# Predict the emoji
+emoji = predictor.predict_emoji(sentence)
 
-# Output the predicted emoji index
-print(f"Predicted emoji index: {prediction}")
+# Output the predicted emoji
+print(f"Predicted Emoji: {emoji}")
 ```
 
