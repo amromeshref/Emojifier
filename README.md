@@ -6,6 +6,8 @@ This project aims to create an AI model that predicts emojis based on input sent
 ## Table of Contents
 1. [Word Embedding](#word-embedding)
 1. [Dataset](#dataset)
+1. [Project Structure](#project-structure)
+1. [Model Prediction](#model-prediction)
 3. [Installation](#installation)
 
 ## Word Embedding
@@ -32,6 +34,32 @@ This is a sample from the dataset:
 <img src= "images/data_set.png" style="width:700px;height:700;">
 </div> 
 
+
+## Project Structure
+- **src/data_transformation.py**: Handles the conversion of sentences into GloVe vectors and transforms the dataset.
+- **src/predict_model.py**: Loads the trained model and predicts emojis for given sentences.
+- **src/train_model.py**: Trains the neural network model using the transformed data and evaluates its performance. The model includes LSTM layers to process the sequence of word embeddings.
+- **src/utils.py**: Contains utility functions for reading GloVe vectors and loading configuration settings.
+- **app.py**: Creates a GUI using Kivy for users to input sentences and get emoji predictions.
+
+##Model Prediction
+To predict an emoji for a given sentence:
+
+```python
+from src.predict_model import ModelPredictor
+
+# Initialize the predictor
+predictor = ModelPredictor()
+
+# Example sentence
+sentence = "I am happy"
+
+# Predict emoji index
+prediction = predictor.predict(sentence)
+
+# Output the predicted emoji index
+print(f"Predicted emoji index: {prediction}")
+```
 
 ## Installation
 1. Create a new environment with a 3.9 Python version.
