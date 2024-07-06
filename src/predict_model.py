@@ -50,7 +50,7 @@ class ModelPredictor(DataTransformer):
             # Reshape the input for the model
             X = X.reshape(1, X.shape[0], X.shape[1])
 
-            # Predict the emoji
+            # Predict the emoji index
             prediction = self.model.predict(X)
             prediction = tf.nn.softmax(prediction)
             prediction = np.argmax(prediction)
