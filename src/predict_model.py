@@ -59,7 +59,7 @@ class ModelPredictor(DataTransformer):
             logging.error("Error: "+str(e))
             raise CustomException(e, sys)
     
-    def get_emoji(self, sentence: str) -> str:
+    def predict_emoji(self, sentence: str) -> str:
         """
         This function will return the emoji for the given sentence.
         input: 
@@ -70,15 +70,15 @@ class ModelPredictor(DataTransformer):
         try:
             prediction = self.predict(sentence)
             if prediction == 0:
-                emoji = ":heart:"
+                emoji = "❤️"
             elif prediction == 1:
-                emoji = ":baseball:"
+                emoji = "⚾️"
             elif prediction == 2:
-                emoji = ":smile:"
+                emoji = "😄"
             elif prediction == 3:
-                emoji = ":disappointed:"
+                emoji = "😞"
             elif prediction == 4:
-                emoji = ":fork_and_knife:"  
+                emoji = "🍴"
             return emoji              
         except Exception as e:
             logging.error("Error: "+str(e))
