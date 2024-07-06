@@ -25,7 +25,7 @@ The dataset used in this project is sourced from `data/emojify_data.csv`, which 
 
 This is a sample from the dataset:
 <div align="center">
-<img src= "images/data_set.png" style="width:400px;height:400;">
+<img src= "images/data_set.png" style="width:700px;height:700;">
 </div> 
 
 
