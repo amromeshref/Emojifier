@@ -42,7 +42,7 @@ This is a sample from the dataset:
 - **src/utils.py**: Contains utility functions for reading GloVe vectors and loading configuration settings.
 - **app.py**: Creates a GUI using Kivy for users to input sentences and get emoji predictions.
 
-##Model Prediction
+## Model Prediction
 To predict an emoji for a given sentence:
 
 ```python
